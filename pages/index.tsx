@@ -1,3 +1,4 @@
+import Hero from '@/Components/Helper/Hero';
 import MobileNav from '@/Components/Helper/MobileNav';
 import Navbar from '@/Components/Helper/Navbar';
 import React, { useState } from 'react'
@@ -13,6 +14,8 @@ const HomePage = () => {
       {/* NavBar */}
       <MobileNav nav={nav} closeNav={closeNavHandler}/>
       <Navbar openNav={openNavHandler}/>
+      {/* Hero */}
+      <Hero/>
     </div>
   )
 }
