@@ -2,7 +2,13 @@ import { Bars3Icon } from '@heroicons/react/16/solid'
 import Image from 'next/image'
 import React from 'react'
 
-const Navbar = () => {
+
+
+interface Props{
+    openNav:() =>void
+}
+
+const Navbar = ({openNav}:Props) => {
   return (
     <div className='w-[100%] bg-white'>
         <div className='flex w-[80%] mx-auto items-center justify-between h-[12vh]'>
@@ -23,7 +29,7 @@ const Navbar = () => {
                     from-transparent via-transparent to-gray-700'></span>
                     <span className='relative'>Book Now</span>
                 </a>
-                <Bars3Icon className='w-[2rem] lg:hidden h-[2rem] text-blue-800'/>
+                <Bars3Icon onClick={openNav} className='w-[2rem] lg:hidden h-[2rem] text-blue-800'/>
             </div>
         </div>
     </div>

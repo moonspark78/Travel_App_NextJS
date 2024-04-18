@@ -1,9 +1,17 @@
 import { XMarkIcon } from '@heroicons/react/16/solid'
 import React from 'react'
 
-const MobileNav = () => {
+
+interface Props{
+    nav:boolean;
+    closeNav:() =>void
+}
+
+const MobileNav = ({nav,closeNav}:Props) => {
+
+    const navAnimation = nav?"translate-x-0":"translate-x-[-100%]"
   return (
-    <div className={`fixed transform transition-all duration-300 top-0 left-0 right-0 bottom-0 z-[10000] bg-[#200f31]`}>
+    <div className={`fixed ${navAnimation} transform transition-all duration-300 top-0 left-0 right-0 bottom-0 z-[10000] bg-[#200f31]`}>
         <div className='w-[100vw] h-[100vh] flex flex-col items-center justify-center'>
             <div className="nav-link-mobile">Home</div>
             <div className="nav-link-mobile">Tour</div>
@@ -19,7 +27,7 @@ const MobileNav = () => {
                     <span className='relative'>Book Now</span>
             </a>
         </div>
-        <div className='absolute cursor-pointer top-[2rem] z-[1000000] right-[2rem] h-[2rem] w-[2rem] text-white'>
+        <div onClick={closeNav} className='absolute cursor-pointer top-[2rem] z-[1000000] right-[2rem] h-[2rem] w-[2rem] text-white'>
             <XMarkIcon/>
         </div>
     </div>
