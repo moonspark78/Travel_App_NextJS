@@ -19,4 +19,8 @@
         after:absolute after:h-[3px] after:bg-yellow-300 after:w-full after:scale-x-0 after:hover:scale-x-100 
         after:transition after:duration-300 after:origin-center uppercase 
     }
+
+    .heading{
+        @apply text-center text-[#333] text-[22px] sm:text-[30px] md:text-[38px] font-bold capitalize
+    }
 }
