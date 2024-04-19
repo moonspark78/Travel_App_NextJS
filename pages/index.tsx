@@ -1,4 +1,5 @@
 import Hero from '@/Components/Helper/Hero';
+import Hotels from '@/Components/Helper/Hotels';
 import MobileNav from '@/Components/Helper/MobileNav';
 import Navbar from '@/Components/Helper/Navbar';
 import TopDestination from '@/Components/Helper/TopDestination';
@@ -19,6 +20,8 @@ const HomePage = () => {
       <Hero/>
       {/* Top Destination */}
       <TopDestination/>
+      {/* Hotels */}
+      <Hotels/>
     </div>
   )
 }
