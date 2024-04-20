@@ -28,6 +28,7 @@ const HomePage = () => {
       <Reviews/>
       {/* Contact */}
       <Contact/>
+      
     </div>
   )
 }
