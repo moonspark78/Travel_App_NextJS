@@ -1,3 +1,4 @@
+import Contact from '@/Components/Helper/Contact';
 import Hero from '@/Components/Helper/Hero';
 import Hotels from '@/Components/Helper/Hotels';
 import MobileNav from '@/Components/Helper/MobileNav';
@@ -26,7 +27,7 @@ const HomePage = () => {
       {/* Reviews */}
       <Reviews/>
       {/* Contact */}
-      
+      <Contact/>
     </div>
   )
 }
